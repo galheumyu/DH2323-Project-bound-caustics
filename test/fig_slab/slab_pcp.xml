@@ -14,6 +14,20 @@
 	<default name="use_max_var" value="true"/>
 	<default name="integrator" value="path_cuts_path"/>
     <default name="res" value="512"/>
+    <default name="lightPosition_x" value="1.0"/>
+    <default name="lightPosition_y" value="2.0"/>
+    <default name="lightPosition_z" value="-2.0"/>
+    <default name="AR" value="10"/>
+    <default name="Am" value="1e-5"/>
+    <default name="AM" value="1e2"/>
+    <default name="INF_AREA_TOL" value="0.0001"/>
+    <default name="u1TOLERATE" value="0.500001"/>
+    <default name="U1T" value="0.500001"/>
+    <default name="SHADING_NORMAL" value="true"/>
+    <default name="SHADING_NORMAL2" value="true"/>
+    <default name="CHAIN_TYPE" value="22"/>
+    <default name="REFRACTION_2D" value="false"/>
+    <default name="dump_bound" value="0"/>
 	<integrator type="$integrator">
 		<integer name="sampleCount" value="$spp"/>
 		<integer name="maxDepth" value="5"/>
@@ -35,6 +49,20 @@
         <integer name="force_sample" value="$force_sample"/>
         <boolean name="use_max_var" value="$use_max_var"/>
         <integer name="res" value="$res"/>
+        <float name="AR" value="$AR"/>
+        <float name="Am" value="$Am"/>
+        <float name="AM" value="$AM"/>
+        <float name="INF_AREA_TOL" value="$INF_AREA_TOL"/>
+        <float name="u1TOLERATE" value="$u1TOLERATE"/>
+        <float name="U1T" value="$U1T"/>
+        <boolean name="SHADING_NORMAL" value="$SHADING_NORMAL"/>
+        <boolean name="SHADING_NORMAL2" value="$SHADING_NORMAL2"/>
+        <integer name="CHAIN_TYPE" value="$CHAIN_TYPE"/>
+        <boolean name="REFRACTION_2D" value="$REFRACTION_2D"/>
+        <integer name="dump_bound" value="$dump_bound"/>
+        <float name="lightPosition_x" value="$lightPosition_x"/>
+        <float name="lightPosition_y" value="$lightPosition_y"/>
+        <float name="lightPosition_z" value="$lightPosition_z"/>
 	</integrator>
 
 	<sensor type="perspective">
@@ -96,7 +124,6 @@
 			<scale value="3"/>
 			<rotate x="1" y="0" z="0" angle="-90"/>
 		</transform>
-
     </shape>
 
     <emitter type="point">

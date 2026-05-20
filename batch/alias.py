@@ -170,7 +170,7 @@ p30 = np.array([-3, 0.0, -3])
 p31 = np.array([6, 0.000001, 0])
 p32 = np.array([0, 0.000002, 6])
 pD0, pD1, pD2 = p30, p31, p32
-mesh, bvhs, obj_tri_cnt_prefix = read_obj("../data/slab10k.obj", [0.0, 0.0, 0])
+mesh, bvhs, obj_tri_cnt_prefix = read_obj("../data/diamonds.obj", [0.0, 0.0, 0])
 print(obj_tri_cnt_prefix)
 ground = np.array([p30, p30+p31, p30+p32])
 
@@ -186,18 +186,18 @@ CHAIN_TYPE = 22 # 1 for reflection and 2 for refraction
 CHAIN_LENGTH = 1 if CHAIN_TYPE < 10 else 2
 
 η_VAL = 0.6666666666666666
-SHADING_NORMAL = True # the first bounce (close to light)
-SHADING_NORMAL2 = True # the second bounce (close to receiver)
+SHADING_NORMAL = False # the first bounce (close to light)
+SHADING_NORMAL2 = False # the second bounce (close to receiver)
 
 # CORE HYPERPARAMETERS
 INF_AREA_TOL = SPLAT_SUBDIV_THRES = 1e-4
-U1T = u1TOLERATE = 0.500001
+U1T = u1TOLERATE = 0.125001
 AR = 1e1 # approx ratio
 
 # NOT IMPORTANT PARAMETERS
 Am = 1e-5 # minimum irradiance
 AM = 1e2 # maximum irradiance
-β_STRONG_THRES = 1e9
+β_STRONG_THRES = 1e99  # please fix explicit before run this code
 β_MIN = 1e-9
 
 BATCH_SIZE = 64

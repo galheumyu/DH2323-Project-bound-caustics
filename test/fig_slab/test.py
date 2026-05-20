@@ -44,7 +44,7 @@ cmd = "..\\..\\mts1\\cbuild\\bin\\mitsuba.exe "
 cmd += "slab_pcp.xml "
 cmd += "-DuseResultant=false -DmethodMask=0 -DdistrPath=../../results/sample_map.txt "
 cmd += "-o %s " % exr_filename0
-cmd += "-Dspp=2 "
+cmd += "-Dspp=2 -Dforce_gamma=70 "
 
 t = my_run_cmd(TESTID, cmd, test_name0, instant=True)
 print(t)
@@ -55,7 +55,7 @@ cmd = "..\\..\\mts1\\cbuild\\bin\\mitsuba.exe "
 cmd += "slab_pcp.xml "
 cmd += "-DuseResultant=false -DmethodMask=9999 -DdistrPath=../../results/sample_map.txt "
 cmd += "-o %s " % exr_filename0
-cmd += "-Dspp=2 -p 32 "
+cmd += "-Dspp=2 -Dforce_gamma=70 -p 32 "
 
 # t = my_run_cmd(TESTID, cmd, test_name0, instant=True)
 # print(t)

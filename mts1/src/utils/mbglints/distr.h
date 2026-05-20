@@ -6,7 +6,9 @@
 #include "./bounder/bounder.h"
 #include <mutex> 
 
-#define COMPACT_MEMORY
+// Keep double-refraction tuple pairs intact when reading sample_map.txt.
+// The compact path stores only one triangle id and turns (ti, tj) into (ti, ti).
+// #define COMPACT_MEMORY
 
 namespace mitsuba
 {

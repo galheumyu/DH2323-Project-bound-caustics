@@ -14,6 +14,20 @@
 	<default name="force_sample" value="0"/>
 	<default name="use_max_var" value="true"/>
     <default name="res" value="512"/>
+    <default name="lightPosition_x" value="1.0"/>
+    <default name="lightPosition_y" value="2.0"/>
+    <default name="lightPosition_z" value="-2.0"/>
+    <default name="AR" value="10"/>
+    <default name="Am" value="1e-5"/>
+    <default name="AM" value="1e2"/>
+    <default name="INF_AREA_TOL" value="0.0001"/>
+    <default name="u1TOLERATE" value="0.125001"/>
+    <default name="U1T" value="0.125001"/>
+    <default name="SHADING_NORMAL" value="false"/>
+    <default name="SHADING_NORMAL2" value="false"/>
+    <default name="CHAIN_TYPE" value="22"/>
+    <default name="REFRACTION_2D" value="false"/>
+    <default name="dump_bound" value="0"/>
 	<integrator type="$integrator">
 		<integer name="sampleCount" value="$spp"/>
 		<integer name="maxDepth" value="20"/>
@@ -36,6 +50,20 @@
         <integer name="force_sample" value="$force_sample"/>
         <boolean name="use_max_var" value="$use_max_var"/>
         <integer name="res" value="$res"/>
+        <float name="AR" value="$AR"/>
+        <float name="Am" value="$Am"/>
+        <float name="AM" value="$AM"/>
+        <float name="INF_AREA_TOL" value="$INF_AREA_TOL"/>
+        <float name="u1TOLERATE" value="$u1TOLERATE"/>
+        <float name="U1T" value="$U1T"/>
+        <boolean name="SHADING_NORMAL" value="$SHADING_NORMAL"/>
+        <boolean name="SHADING_NORMAL2" value="$SHADING_NORMAL2"/>
+        <integer name="CHAIN_TYPE" value="$CHAIN_TYPE"/>
+        <boolean name="REFRACTION_2D" value="$REFRACTION_2D"/>
+        <integer name="dump_bound" value="$dump_bound"/>
+        <float name="lightPosition_x" value="$lightPosition_x"/>
+        <float name="lightPosition_y" value="$lightPosition_y"/>
+        <float name="lightPosition_z" value="$lightPosition_z"/>
 	</integrator>
 
 	<sensor type="perspective">
@@ -101,8 +129,8 @@
         </transform>
     </emitter>
 
-	
-    <shape type="sphere">
+    <shape type="obj">
+        <string name="filename" value="../../data/stdsphere.obj"/>
         <emitter type="area">
             <rgb name="radiance" value="2, 0.5, 0.3"/>
         </emitter>
@@ -113,7 +141,8 @@
         </transform>
     </shape>
 	
-    <shape type="sphere">
+    <shape type="obj">
+        <string name="filename" value="../../data/stdsphere.obj"/>
         <emitter type="area">
             <rgb name="radiance" value="2,0.8,0.5"/>
         </emitter>

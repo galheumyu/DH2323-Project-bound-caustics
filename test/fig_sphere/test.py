@@ -12,7 +12,7 @@ cmd += "-DuseResultant=true -DmethodMask=0 "
 # cmd += "-DdistrPath=../../results/sample_map.txt "
 cmd += "-DdistrPath=../../data/s.obj "
 cmd += "-o %s " % exr_filename0
-cmd += "-Dspp=12 "
+cmd += "-Dspp=30 "
 cmd += "-Dtimeout=0 "
 # print(cmd)
 

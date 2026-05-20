@@ -132,7 +132,7 @@
     </shape>
 
     <emitter type="point">
-        <spectrum name="intensity" value="50"/>
+        <spectrum name="intensity" value="10"/>
         <boolean name="caustic_emitter_multi" value="true"/>
         <transform name="toWorld">
             <translate x="$lightPosition_x" y="$lightPosition_y" z="$lightPosition_z"/>
