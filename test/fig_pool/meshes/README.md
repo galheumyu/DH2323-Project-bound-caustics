@@ -1,1 +1,0 @@
-- The swimming pool scene is modeled by Tizian Zeltner

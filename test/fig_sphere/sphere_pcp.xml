@@ -107,6 +107,14 @@
         <string name="filename" value="../../data/s.obj"/>
         <boolean name="caustic_caster_multi" value="true"/>
         <boolean name="caustic_bouncer" value="true"/>
+        <!-- Rough dielectric alpha experiment:
+        <bsdf type="roughdielectric">
+            <string name="distribution" value="ggx"/>
+            <float name="alpha" value="0.05"/>
+            <float name="intIOR" value="1.5" />
+            <float name="extIOR" value="1.0" />
+        </bsdf>
+        -->
         <bsdf type="dielectric">
             <float name="intIOR" value="1.5" />
             <float name="extIOR" value="1.0" />

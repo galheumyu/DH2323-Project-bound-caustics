@@ -283,7 +283,6 @@ public:
             /*                     Specular path sampling                           */
             /* ==================================================================== */
             if (bsdf->getType() & BSDF::ESmooth) {
-
                 // todo: move to class member
                 // todo: bsdf
                 // todo: spectrum

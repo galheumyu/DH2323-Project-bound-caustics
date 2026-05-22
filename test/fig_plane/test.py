@@ -1,7 +1,8 @@
 TESTID = "fig_plane"
 import sys
+import os
 
-sys.path.append("..")
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from labcommon import *
 
 test_name0 = "Bounded"

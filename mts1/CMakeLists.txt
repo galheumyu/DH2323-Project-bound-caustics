@@ -20,7 +20,8 @@ endif(NOT COMPILE_THREAD)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 set(MITSUBA_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
-set(MITSUBA_DEPENDENCY_DIR ${MITSUBA_ROOT_DIR}/dependencies)
+# Force dependency directory to the downloaded dependencies
+ set(MITSUBA_DEPENDENCY_DIR "C:/Users/Xinyu/.qclaw/workspace/dependencies/dependencies")
 set(MITSUBA_BIN_DIR ${CMAKE_BINARY_DIR}/bin)
 file(MAKE_DIRECTORY ${MITSUBA_BIN_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${MITSUBA_BIN_DIR})
@@ -36,12 +37,13 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${MITSUBA_BIN_DIR})
 
 # Configure external dependencies
 if (NOT Python_ROOT_DIR)
-	set(Python_ROOT_DIR "D:/Python/Python39" CACHE STRING "Python installtion path" FORCE)
-	message("No Python_ROOT_DIR specified. Python_ROOT_DIR is set to default value 'D:/Python/Python39'")
+	set(Python_ROOT_DIR "C:/Users/Xinyu/AppData/Local/Programs/Python/Python39" CACHE STRING "Python installtion path" FORCE)
+	message("No Python_ROOT_DIR specified. Python_ROOT_DIR is set to default value 'C:/Users/Xinyu/AppData/Local/Programs/Python/Python39'")
 endif(NOT Python_ROOT_DIR)
-find_package(Python COMPONENTS Interpreter Development REQUIRED)
-set(PYTHON_VERSION_WITHOUT_DOT "python${Python_VERSION_MAJOR}${Python_VERSION_MINOR}")
-message("Found python version: ${PYTHON_VERSION_WITHOUT_DOT}")
+# Force Python 3.9
+find_package(Python 3.9 EXACT COMPONENTS Interpreter Development REQUIRED)
+set(PYTHON_VERSION_WITHOUT_DOT "python39")
+message("Forcing python version: ${PYTHON_VERSION_WITHOUT_DOT}")
 
 find_package( PythonLibs REQUIRED )
 include_directories( ${PYTHON_INCLUDE_DIRS} )
