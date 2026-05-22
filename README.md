@@ -17,9 +17,8 @@ The Bernstein bounds-based caustics rendering algorithm is a deterministic sampl
 ```text
 bound-caustics/
 ├── mts1/                        # Mitsuba 0.6 core engine & C++ integrator plugin
-│   └── src/integrators/         # Core implementation of path_cuts_path integrator
-│       └── mbglints/            # Runtime: distr.h, glintbounce.h (Sampling & Newton solvers)
-├── bounder/                     # Single-scattering: C++ real-time bounding logic when loading .obj
+│   └── src/integrators/path/    # path_cuts_path integrator
+│   └── src/utils/mbglints/      # Sampling & Newton solvers, includes bounder (Single-scattering bound finding)
 ├── batch/                       # Python precomputation scripts (for double-scattering scenes)
 │   ├── alias.py                 # Scene configuration parameters
 │   ├── run_mesh.py              # Generates spatial distribution file: results/sample_map.txt
