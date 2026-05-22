@@ -3,7 +3,7 @@
 This project reproduces and analyzes the paper "Bernstein Bounds for Caustics".（[https://zhiminfan.work/paper/bound_caustics_preprint.pdf](https://zhiminfan.work/paper/bound_caustics_preprint.pdf)）
 Based on the Mitsuba 0.6 framework, it implements the two-stage pipeline of precomputation and rendering.
 
-**Full Report** (link to be added)
+#### Full Report: [Report_Xinyu_Ge_Final_Project.pdf](Report_Xinyu%20Ge_Final%20Project.pdf)
 
 ---
 
